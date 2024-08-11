@@ -95,7 +95,6 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
     int u_xlati9 = _CharacterId;
     // u_xlat16_2.xyz = _SekaiCharacterSpecularColorArray[u_xlati9].www * _SekaiCharacterSpecularColorArray[u_xlati9].xyz;
     float4 htex = tex2D(HTexSampler, uv);
-    if(!use_spheremap) htex.z = 1;
     float faceshadow = 1;
     // if(use_subtexture) faceshadow = ;
     float ndotl = dot(-light_d, normal);
@@ -103,7 +102,7 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
 
     bool check_face = htex.z > 0.7;
 
-    ndotl = (check_face || use_subtexture) ? 1-face_shading(uv2) * htex.z : (Shitkai_Shadow(ndotl, htex.z));
+    ndotl = check_face ? 1-face_shading(uv2) * htex.z : (Shitkai_Shadow(ndotl, htex.z));
 
     
     // ndotl = ;

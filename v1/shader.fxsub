@@ -29,10 +29,7 @@ vs_out vs_model ( vs_in i)
     vs_out o; //you're not mentally sane if you write this as INPUT/OUTPUT
     o.pos = mul(i.pos, mmd_wvp);
     o.uv = i.uv;
-    if(use_subtexture){
-        o.uv.x *= 0.5;
-    }
-	o.normal = normalize(mul((float3x3) mmd_world, i.normal));
+    o.normal = normalize(mul((float3x3) mmd_world, i.normal));
     o.view = normalize(mmd_cameraPosition - mul(i.pos.xyz, (float3x3)mmd_world));
     o.vertex = i.vertexcolor;
     return o;

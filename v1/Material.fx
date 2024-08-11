@@ -1,5 +1,8 @@
 #define RimLight_Bone "Rim_Light.pmx"
 
+//#define SET_H "Texture2D/tex_body_H.png"
+//#define SET_S "Texture2D/tex_body_S.png"
+
 #define _CharacterId 0
 
 #define _DefaultSkinColor float4(0.9921875f, 0.9609375f, 0.921875f, 1.0f)
