@@ -1,3 +1,6 @@
+# Please know that I am (completely aware of bugs related to intel and old gpus)[https://github.com/Elysia-simp/Shitkai-Shader/issues/2]. No need to bug report, I have no solutions at this time.
+
+
 # Why?
 
 For v1 all repositories were not that accurate
