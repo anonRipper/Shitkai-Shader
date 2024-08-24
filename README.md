@@ -18,6 +18,7 @@ Please make all bug reports in issues or in my DMS via CBTDWG on discord
 All inquires can also be made via my Discord (No middleman please)
 
 # Rules
+ALL GPL-3.0 RULES APPLY
 
 1. Do not claim this shader as yours, Credit me as Chi, Chips, Chizukimo
 2. Do not make NSFW content with this shader (that's just disgusting)
