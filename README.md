@@ -9,7 +9,7 @@ for v3... Nobody else had done it
 
 # In regards to custom models
 
-This script is intended for models that are ripped from the game, so my support/help is very limited on this matter.
+This shader is intended for models that are ripped from the game, so my support/help is very limited on this matter.
 
 # Contact
 
