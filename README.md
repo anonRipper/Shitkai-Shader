@@ -1,5 +1,8 @@
 # Please know that I am [completely aware of bugs related to intel and old gpus](https://github.com/Elysia-simp/Shitkai-Shader/issues/2). No need to bug report, I have no solutions at this time.
 
+# Important update
+
+I have begun recoding the entirety of Shitkai-v3. Any new issues is considered null until after the update.
 
 # Why?
 
