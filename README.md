@@ -1,4 +1,4 @@
-# Please know that I am [completely aware of bugs related to intel and old gpus](https://github.com/Elysia-simp/Shitkai-Shader/issues/2). No need to bug report, I have no solutions at this time.
+# Due to repeat offenders that break both mine and GPLv3 rules. The Shitkai shader will no longer be maintained nor will the shader update go live.
 
 # Important update
 
