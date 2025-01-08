@@ -1,8 +1,12 @@
-# Due to repeat offenders that break both mine and GPLv3 rules. The Shitkai shader will no longer be maintained nor will the shader update go live.
+# Please credit Chips and anonRipper for this version
 
-# Important update
+# Changelog
 
-I have begun recoding the entirety of Shitkai-v3. Any new issues is considered null until after the update.
+Fixed an issue where model looks brighter when self shadow is turned off
+
+Better outline calculation
+
+Some tweaks from my Sekai Model Pack
 
 # Why?
 
