@@ -18,7 +18,19 @@ float4 egColor;
 
 //DO NOT FUCKING DELETE THIS AJDSHF
 float4x4 head_bone : CONTROLOBJECT < string name = "(self)"; string item = "“ª"; >;
+float morph : CONTROLOBJECT < string name = "(self)"; string item = Distortion_Morph; >;
 
 //mmd light source
 float3 light_d : DIRECTION < string Object = "Light"; >;
 
+float4 MaterialDiffuse  : DIFFUSE   < string Object = "Geometry"; >;
+float3 MaterialAmbient  : AMBIENT   < string Object = "Geometry"; >;
+float3 MaterialEmissive : EMISSIVE  < string Object = "Geometry"; >;
+float3 MaterialSpecular : SPECULAR  < string Object = "Geometry"; >;
+float  SpecularPower    : SPECULARPOWER < string Object = "Geometry"; >;
+float3 LightDiffuse  : DIFFUSE  < string Object = "Light"; >;
+float3 LightAmbient  : AMBIENT  < string Object = "Light"; >;
+float3 LightSpecular : SPECULAR < string Object = "Light"; >;
+static float4 DiffuseColor  = MaterialDiffuse  * float4(LightDiffuse, 1.0f);
+static float3 AmbientColor  = MaterialAmbient  * LightAmbient + MaterialEmissive;
+static float3 SpecularColor = MaterialSpecular * LightSpecular;

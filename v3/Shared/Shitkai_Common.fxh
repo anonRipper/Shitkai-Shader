@@ -88,15 +88,17 @@ float3 Shitkai_Coloring(float3 u_xlat1, float u_xlati9, float htex, float3 diffu
     #ifdef Shadow1SkinColor
     Shadow1SkinColor = _Shadow1SkinColor;
     #endif
+    Shadow1SkinColor -= S;
 
     float3 Shadow2SkinColor = skinShadow2Table[u_xlati9];
     #ifdef Shadow1SkinColor
     Shadow2SkinColor = _Shadow1SkinColor;
     #endif
+    Shadow2SkinColor -= S;
 
     float3 u_xlat16_6;
-    float3 u_xlat4 = (_SekaiShadowColor.xyz - S) * Shadow1SkinColor.xyz;
-    float3 u_xlat5 = (_SekaiShadowColor.xyz - S) * Shadow1SkinColor.xyz;
+    float3 u_xlat4 = _SekaiShadowColor.xyz * Shadow1SkinColor.xyz;
+    float3 u_xlat5 = _SekaiShadowColor.xyz * Shadow1SkinColor.xyz;
     float u_xlat16_26 = u_xlat1.x + u_xlat1.x;
     u_xlat16_6.x = u_xlat1.x * 2.0 + -1.0;
 

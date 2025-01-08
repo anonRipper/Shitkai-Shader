@@ -15,4 +15,5 @@ float Shadow_B : CONTROLOBJECT < string name = RimLight_Bone; string item = "SHA
 float Spec_R : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECULAR_COL_R"; >; 
 float Spec_G : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECULAR_COL_G"; >; 
 float Spec_B : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECULAR_COL_B"; >; 
+float Edge_Scale : CONTROLOBJECT < string name = RimLight_Bone; string item = "Edge_Scale"; >; 
 

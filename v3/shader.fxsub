@@ -73,17 +73,15 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
 
     // float2 global_time = uv;
     #ifdef use_distortion
-    uv = Distortion(uv);
-    #endif
-
-    #ifdef additive_alpha
-
-    float2 uv_offset = Eyelight_Range * abs(sin(time * Eyelight_Speed));
-
-
-    uv += uv_offset;
+        if (morph < 1){
+            uv = Distortion(uv);
+            float2 uv_offset = Eyelight_Range * abs(sin(time * Eyelight_Speed));
+            uv += uv_offset;
+        }
     // diffuse = tex2D(diffuseSampler, distorted_uv);
     #endif
+    egColor.rgb = saturate(max(0,dot(i.normal,-light_d)) * DiffuseColor.rgb + AmbientColor);
+    egColor.a = DiffuseColor.a;
 
 
     
@@ -97,6 +95,9 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
     float4 htex = tex2D(HTexSampler, uv);
     if(!use_spheremap) htex.z = 1;
     float faceshadow = 1;
+    #ifdef use_distortion
+    faceshadow = 0;
+    #endif
     // if(use_subtexture) faceshadow = ;
     float ndotl = dot(-light_d, normal);
 

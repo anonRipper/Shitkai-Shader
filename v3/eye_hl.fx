@@ -2,29 +2,29 @@
 
 #define Distortion_Morph "distortion_off"
 
-// #define additive_alpha
+#define additive_alpha
 
 #define Eyelight_Speed 15
 #define Eyelight_Range 0.008
 
-// #define use_distortion
+#define use_distortion
 
 #define _DistortionFPS 12 
 
 #define distortion1 "eye_distortion.png"
 
 
-#define _DistortionTexTilingX 1.0f
-#define _DistortionTexTilingY 1.0
+#define _DistortionTexTilingX 0.4
+#define _DistortionTexTilingY 0.4
 
-#define _DistortionScrollSpeed 0.1f
+#define _DistortionScrollSpeed 0.5
 
-#define _DistortionScrollX 1.78f
-#define _DistortionScrollY 1.07f
+#define _DistortionScrollX 0.5
+#define _DistortionScrollY 0.5
 
-#define _DistortionIntensity 0.65f
-#define _DistortionIntensityX 0.2f
-#define _DistortionIntensityY 0.307f
+#define _DistortionIntensity 0.3
+#define _DistortionIntensityX 0.05
+#define _DistortionIntensityY 0.226
 
 #define _DistortionOffsetX 0.57f
 #define _DistortionOffsetY 0.57f
@@ -32,7 +32,7 @@
 #define force_front_light // Only affects facemap lighting
 
 
-#define _OutlineWidth 0.001f
+#define _OutlineWidth 0.0f
 #define _OutlineL 0.5
 #define _OutlineOffset 0 
 
