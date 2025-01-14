@@ -1,3 +1,6 @@
+//#define iGPU
+//Delete slash before # to enable Intel GPU fix. (This will disable rimlight)
+
 #define RimLight_Bone "Rim_Light.pmx"
 
 #define Distortion_Morph "distortion_off"

@@ -121,6 +121,9 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
     #endif
 
     //
+    #ifdef iGPU
+    rim_int = 0;
+    #endif
 
     float3 lightDirection = (light_check) ? normalize(rim_bone._31_32_33) : light_d;
     float4 u_xlat3 = 1;
