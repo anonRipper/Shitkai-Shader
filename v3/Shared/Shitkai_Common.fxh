@@ -77,6 +77,17 @@ float Shitkai_Shadow(float ndotl, float Z){
     return ndotl;
 }
 
+float Shitkai_Shadow2(float ndotl, float Z){
+
+    float u_xlat16_26 = Z * 2.0 + -1.0;
+    ndotl = u_xlat16_26 + ndotl;
+
+    ndotl = saturate(ndotl);
+	ndotl = step(ndotl, _SekaiShadowThreshold);
+
+    return ndotl;
+}
+
 
 float3 Shitkai_Coloring(float3 u_xlat1, float u_xlati9, float htex, float3 diffuse, float4 S){
     float3 DefaultSkinColor = skinColorTable[u_xlati9];

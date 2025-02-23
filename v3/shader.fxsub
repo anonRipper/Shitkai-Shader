@@ -2,6 +2,7 @@
 
 //includes
 #include <header/header.fxh>
+#include "HgShadow_ObjHeader.fxh"
 //
 
 //base structure
@@ -23,6 +24,7 @@ struct vs_out
     float3 normal       : TEXCOORD2;
     float3 view         : TEXCOORD3;
     float2 uv2          : TEXCOORD4;
+    float4 PPos     : TEXCOORD5;
     // float eye_closed    : TEXCOORD5;
 };
 
@@ -38,6 +40,7 @@ vs_out vs_model (vs_in i)
     o.view = normalize(mmd_cameraPosition - mul(i.pos.xyz, (float3x3)mmd_world));
     o.vertex = i.vertexcolor;
     o.uv2 = i.uv2;
+    o.PPos = o.pos;
 
     return o;
 }
@@ -106,6 +109,11 @@ float4 ps_model(vs_out i, float vface : VFACE) : COLOR0
 
     ndotl = (check_face || use_subtexture) ? 1-face_shading(uv2) * htex.z : (Shitkai_Shadow(ndotl, htex.z));
 
+    if(HgShadow_Valid && EnableHgShadow)
+    {
+        float comp = HgShadow_GetSelfShadowRate(i.PPos);
+        ndotl = (check_face || use_subtexture) ? 1-face_shading(uv2) * htex.z : (Shitkai_Shadow2(comp, htex.z));
+    }
     
     // ndotl = ;
     u_xlat1.xyz = (-diffuse.xyz) + shadow;

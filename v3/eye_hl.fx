@@ -1,6 +1,9 @@
 //#define iGPU
 //Delete slash before # to enable Intel GPU fix. (This will disable rimlight)
 
+#define EnableHgShadow false
+//Change true to false to disable HgShadow.
+
 #define RimLight_Bone "Rim_Light.pmx"
 
 #define Distortion_Morph "distortion_off"
@@ -41,7 +44,7 @@
 
 #define _SekaiShadowThreshold 0.5f
 
-#define facemap "an/faceSdf.png"
+#define facemap "faceSdf.png"
 
 #define _CharacterId 8
 

@@ -8,6 +8,10 @@ Better outline calculation
 
 Some tweaks from my Sekai Model Pack
 
+HgShadow Support
+
+iGPU fix (disable rim)
+
 # Why?
 
 For v1 all repositories were not that accurate
