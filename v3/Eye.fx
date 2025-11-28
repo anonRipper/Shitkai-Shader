@@ -4,7 +4,7 @@
 #define EnableHgShadow true
 //Change true to false to disable HgShadow.
 
-#define shadowTint float3(0.2, 0.3, 0.9)
+#define eye float3(1.0,0.0,0.0)
 
 #define RimLight_Bone "Rim_Light.pmx"
 

@@ -1,7 +1,7 @@
 //#define iGPU
 //Delete slash before # to enable Intel GPU fix. (This will disable rimlight)
-
-#define EnableHgShadow true
+#define AL
+#define EnableHgShadow false
 //Change true to false to disable HgShadow.
 
 #define shadowTint float3(0.2, 0.3, 0.9)

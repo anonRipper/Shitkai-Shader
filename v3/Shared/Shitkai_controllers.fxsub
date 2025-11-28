@@ -5,6 +5,7 @@ float Rim_Shadow_R : CONTROLOBJECT < string name = RimLight_Bone; string item = 
 float Rim_Shadow_G : CONTROLOBJECT < string name = RimLight_Bone; string item = "RIM_SHADOW_G"; >; 
 float Rim_Shadow_B : CONTROLOBJECT < string name = RimLight_Bone; string item = "RIM_SHADOW_B"; >; 
 float Rim_Intensity : CONTROLOBJECT < string name = RimLight_Bone; string item = "RIM_INT"; >; 
+float Rim_Disable : CONTROLOBJECT < string name = RimLight_Bone; string item = "RIM_DISABLE"; >; 
 float Ambient_R : CONTROLOBJECT < string name = RimLight_Bone; string item = "AMBIENT_R"; >; 
 float Ambient_G : CONTROLOBJECT < string name = RimLight_Bone; string item = "AMBIENT_G"; >; 
 float Ambient_B : CONTROLOBJECT < string name = RimLight_Bone; string item = "AMBIENT_B"; >; 
@@ -16,4 +17,5 @@ float Spec_R : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECU
 float Spec_G : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECULAR_COL_G"; >; 
 float Spec_B : CONTROLOBJECT < string name = RimLight_Bone; string item = "SPECULAR_COL_B"; >; 
 float Edge_Scale : CONTROLOBJECT < string name = RimLight_Bone; string item = "Edge_Scale"; >; 
-
+float Monochrome : CONTROLOBJECT < string name = RimLight_Bone; string item = "Monochrome"; >; 
+float AL_Power : CONTROLOBJECT < string name = RimLight_Bone; string item = "AL_Power"; >; 

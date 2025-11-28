@@ -65,5 +65,17 @@ float4 ps_edge(edge_out i) : COLOR0
     out_col.xyz = Shitkai_Coloring(out_col.xyz, u_xlati9, Colormask, out_col.xyz, 0);
 
     out_col.xyz *= _OutlineL;
+    if (Monochrome > 0)
+    {
+        #ifdef shadowTint
+        float luminance = dot(out_col.rgb, float3(0.299, 0.587, 0.114));
+        out_col.xyz = float3(luminance, luminance, luminance);
+        float shadowFactor = 1.0 - luminance;
+        out_col.xyz = lerp(out_col.xyz, shadowTint, shadowFactor * 0.3);
+        #endif
+    }
+    #ifdef AL
+    out_col *= 0;
+    #endif
     return out_col;
 }
