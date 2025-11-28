@@ -12,6 +12,10 @@ HgShadow Support
 
 iGPU fix (disable rim)
 
+Added Monochrome effect
+
+Added AutoLuminous Support
+
 # Why?
 
 For v1 all repositories were not that accurate
